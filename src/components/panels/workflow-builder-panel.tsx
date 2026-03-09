@@ -54,10 +54,10 @@ function TemplateForm({
       await onSave({
         ...(initial?.id ? { id: initial.id } : {}),
         name: name.trim(),
-        description: description.trim() || undefined,
+        description: description.trim() || null,
         model,
         task_prompt: taskPrompt.trim(),
-        agent_role: agentRole.trim() || undefined,
+        agent_role: agentRole.trim() || null,
         timeout_seconds: timeoutSeconds,
         tags: tagsInput.split(',').map(t => t.trim()).filter(Boolean),
       })
