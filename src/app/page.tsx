@@ -30,6 +30,7 @@ import { AlertRulesPanel } from '@/components/panels/alert-rules-panel'
 import { MultiGatewayPanel } from '@/components/panels/multi-gateway-panel'
 import { SuperAdminPanel } from '@/components/panels/super-admin-panel'
 import { GitHubSyncPanel } from '@/components/panels/github-sync-panel'
+import { WorkflowBuilderPanel } from '@/components/panels/workflow-builder-panel'
 import { ChatPanel } from '@/components/chat/chat-panel'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { useWebSocket } from '@/lib/websocket'
@@ -187,6 +188,8 @@ function ContentRouter({ tab }: { tab: string }) {
       return <SettingsPanel />
     case 'github':
       return <GitHubSyncPanel />
+    case 'builder':
+      return <WorkflowBuilderPanel />
     case 'super-admin':
       return <SuperAdminPanel />
     default:

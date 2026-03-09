@@ -41,6 +41,7 @@ const navGroups: NavGroup[] = [
     id: 'automate',
     label: 'AUTOMATE',
     items: [
+      { id: 'builder', label: 'Builder', icon: <BuilderIcon />, priority: false },
       { id: 'cron', label: 'Cron', icon: <CronIcon />, priority: false },
       { id: 'spawn', label: 'Spawn', icon: <SpawnIcon />, priority: false },
       { id: 'webhooks', label: 'Webhooks', icon: <WebhookIcon />, priority: false },
@@ -604,6 +605,18 @@ function SettingsIcon() {
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="8" cy="8" r="2" />
       <path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.4 1.4M11.55 11.55l1.4 1.4M3.05 12.95l1.4-1.4M11.55 4.45l1.4-1.4" />
+    </svg>
+  )
+}
+
+function BuilderIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="1" y="4" width="4" height="4" rx="0.75" />
+      <rect x="6" y="4" width="4" height="4" rx="0.75" />
+      <rect x="11" y="4" width="4" height="4" rx="0.75" />
+      <path d="M5 6h1M10 6h1" />
+      <path d="M3 8v3M8 8v3M13 8v3M1 11h14" />
     </svg>
   )
 }
